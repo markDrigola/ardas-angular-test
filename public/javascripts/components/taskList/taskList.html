@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="h1">Task list</h1>
+    <ul class="list-group">
+        <li class="col-lg-4" ng-repeat="task in ctrl.taskList | filter: ctrl.taskFilter" ui-sref="task({id: task.id})">
+            <div class="list-group-item" ng-class="task.is_high_priority ? 'strong':'' ">
+                <p class="h3">{{ task.name }}</p>
+                <br>
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> <strong>{{ task.actual_effort }} h</strong> / {{ task.estimated_effort }} h</p>
+                <br>
+                <p><i class="fa fa-calendar" aria-hidden="true"></i> {{ task.due_date | date : format }}</p>
+                <hr>
+                <span class="border-tags" ng-repeat="tags in task.tags"> {{ tags }} </span>
+                <br>
+                <br>
+            </div>
+        </li>
+    </ul>
+</div>

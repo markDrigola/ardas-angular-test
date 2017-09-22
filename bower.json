@@ -1,0 +1,36 @@
+{
+  "name": "angular-starts",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Mark <markDrigola2802@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "system.js": "^0.19.16",
+    "bootstrap": "^3.3.7",
+    "traceur": "^0.0.111",
+    "angular-ui-router": "^0.4.2",
+    "angular-sanitize": "^1.6.4",
+    "moment-timezone": "^0.5.13",
+    "ui-bootstrap": "^2.5.0",
+    "angular-google-maps": "^2.4.1",
+    "angular-xeditable": "^0.8.0"
+  },
+  "devDependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "ngmap": "^1.18.4",
+    "angular-strap": "^2.3.12"
+  }
+}

@@ -1,0 +1,58 @@
+//@import "variables/_variables";
+//===========   BASE STYLE  ===========
+@import "base-scss/reset";
+@import "base-scss/fonts";
+//===========   BASE STYLE	END
+//===========		MAIN STYLE		===========
+
+html {
+  font-size: 10px;
+  height: 100%;
+}
+body {
+  font-size: 1.6rem;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: rgba(0,0,0,0.02);
+
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.d-table {
+  display: table;
+
+  &__cell {
+    display: table-cell;
+  }
+
+  &_vm {
+    vertical-align: middle;
+  }
+}
+//===========		COMPONENTS STYLE	END
+//===========		PARTIALS STYLE		===========
+@import "taskList/taskList";
+@import "task/task";
+//===========		PARTIALS STYLE END
+//===========		PAGE STYLE		===========
+//===========		PAGE STYLE	END
+
+.all-pad-none {
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}

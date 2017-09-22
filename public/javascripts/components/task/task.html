@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="h1">Task</h1>
+    <ul class="list-group" ng-if="ctrl.taskById" ng-class="ctrl.taskById ? 'one-task':''">
+        <li class="">
+            <div class="list-group-item col-lg-12">
+                <p class="h3" editable-text="ctrl.taskById.name">{{ ctrl.taskById.name || "empty" }}</p>
+                <br>
+                <p><i class="fa fa-clock-o" aria-hidden="true"></i> <strong>{{ ctrl.taskById.actual_effort }} h</strong> / {{ ctrl.taskById.estimated_effort }} h</p>
+                <br>
+                <p><i class="fa fa-calendar" aria-hidden="true"></i> {{ ctrl.taskById.due_date | date : format }}</p>
+                <br>
+                <p>{{ ctrl.taskById.description }}</p>
+                <hr>
+                <span class="border-tags" ng-repeat="tags in ctrl.taskById.tags"> {{ tags }} </span>
+                <br>
+                <br>
+            </div>
+        </li>
+    </ul>
+    <h2 class="h2" ng-show="!ctrl.taskById">Task not found</h2>
+    <button class="btn btn-primary" ng-if="ctrl.taskName !== ctrl.taskById.name" ng-click="ctrl.saveRefactoringTask()">Save</button>
+    <br>
+    <p class="task-up-text" ng-if="ctrl.textShow">Task update</p>
+</div>
